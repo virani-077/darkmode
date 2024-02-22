@@ -40,10 +40,10 @@ const Home = () => {
     btn={toggleDarkMode}
      />
     <Alert alert={alert}/>
-    <div className='container my-3'>
+    <div className='container'>
         <Form heading="Enter Text" mode={darkMode} show={show}/>
         {/* <DarkMode/> */}
-        <About/>
+        <About mode={darkMode}/>
     </div>
     </>
   )

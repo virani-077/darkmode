@@ -38,15 +38,15 @@ const Form = (props) => {
             <div className="mb-3">
                 <textarea value={text} onChange={handleONChange} className="form-control" id="myBox" rows="6" style={{backgroundColor: props.mode === 'dark'?'grey':'white', color:props.mode === 'dark'?'white':'black' }}></textarea>
             </div>
-            <button className='btn btn-primary mx-2' onClick={changeUp}>toUpperCase</button>
-            <button className='btn btn-primary mx-2' onClick={changeLo}>toLowerCase</button>
-            <button className='btn btn-primary mx-2' onClick={clear}>Clear</button>
-            <button className='btn btn-primary mx-2' onClick={clearExtraSpace}>Remove Exra Space</button>
-            <button className='btn btn-primary mx-2' onClick={remove}>Clear</button>
+            <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={changeUp}>toUpperCase</button>
+            <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={changeLo}>toLowerCase</button>
+            <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={clear}>Clear</button>
+            <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={clearExtraSpace}>Remove Exra Space</button>
+            <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={remove}>Clear</button>
         </div>
         <div style={{color: props.mode === 'dark'?'white':'black'}}>
             <h3>Your Summary</h3>
-            <p>{text.split(" ").length} Word{text.length} character </p>
+            <p>{text.split(" ").filter((e)=>{return e.length!==0}).length} Word{text.length} character </p>
             <p>{text}</p>
         </div>
     </>
