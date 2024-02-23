@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import NavBar from "./NavBar";
-import Form from "./Form";
-import Alert from "./Alert";
-import About from "./About";
-// import DarkMode from './demo/DarkMode'
+import NavBar from "../Component/NavBar";
+import Form from "../Component/Form";
+import Alert from "../Component/Alert";
 
-const Home = () => {
+const HomePage = () => {
   const [darkMode, setDarkMode] = useState("light");
   const [alert, setAlert] = useState(null);
 
@@ -32,18 +30,15 @@ const Home = () => {
       show("Ligt mode has been Enable", "Success");
     }
   };
-
   return (
     <>
       <NavBar mode={darkMode} btn={toggleDarkMode} />
       <Alert alert={alert} />
       <div className="container">
         <Form heading="Enter Text" mode={darkMode} show={show} />
-        {/* <DarkMode/> */}
-        <About mode={darkMode} path="/About" />
       </div>
     </>
   );
 };
 
-export default Home;
+export default HomePage;
