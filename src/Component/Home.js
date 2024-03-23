@@ -3,7 +3,6 @@ import NavBar from "./NavBar";
 import Form from "./Form";
 import Alert from "./Alert";
 import About from "./About";
-// import DarkMode from './demo/DarkMode'
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState("light");
@@ -39,7 +38,6 @@ const Home = () => {
       <Alert alert={alert} />
       <div className="container">
         <Form heading="Enter Text" mode={darkMode} show={show} />
-        {/* <DarkMode/> */}
         <About mode={darkMode} path="/About" />
       </div>
     </>
