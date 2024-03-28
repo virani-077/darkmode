@@ -55,35 +55,35 @@ const Form = (props) => {
             <div className="btn-group mb-3" role="group">
               <button
                 disabled={text.length === 0}
-                className="btn btn-primary"
+                className="btn btn-primary mx-2 my-1"
                 onClick={changeUp}
               >
                 toUpperCase
               </button>
               <button
                 disabled={text.length === 0}
-                className="btn btn-primary"
+                className="btn btn-primary mx-2 my-1"
                 onClick={changeLo}
               >
                 toLowerCase
               </button>
               <button
                 disabled={text.length === 0}
-                className="btn btn-primary"
+                className="btn btn-primary mx-2 my-1"
                 onClick={clear}
               >
                 Clear
               </button>
               <button
                 disabled={text.length === 0}
-                className="btn btn-primary"
+                className="btn btn-primary mx-2 my-1"
                 onClick={clearExtraSpace}
               >
                 Remove Extra Space
               </button>
               <button
                 disabled={text.length === 0}
-                className="btn btn-primary"
+                className="btn btn-primary mx-2 my-1"
                 onClick={remove}
               >
                 Remove Last Character
@@ -93,7 +93,8 @@ const Form = (props) => {
           <div style={{ color: props.mode === "dark" ? "white" : "black" }}>
             <h3>Your Summary</h3>
             <p>
-              {text.split(/\s+/).filter((e) => e.length !== 0).length} Word{text.length} character{" "}
+              {text.split(/\s+/).filter((e) => e.length !== 0).length} Word
+              {text.length} character{" "}
             </p>
             <p>{text}</p>
           </div>
